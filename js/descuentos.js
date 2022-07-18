@@ -31,10 +31,10 @@ function buttonPriceDiscount() {
     function precios(cuponDescuento) {
         const precioFinal = calcularPrecioOferta(precioConDescuento, cuponDescuento);
 
-        const resultP = document.getElementById("ResultP");
-        resultP.innerText = "El precio con descuento son: $" + precioConDescuento;
+        const precio = document.getElementById("Precio");
+        precio.innerText = priceValue;
         const resultF = document.getElementById("ResultF");
-        resultF.innerText = "El precio con cupón son: $" + precioFinal;
+        resultF.innerText = "$" + precioFinal;
     }
 
 //Validar y aplicar el descuento del cupon agregado

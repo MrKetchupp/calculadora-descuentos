@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porcentajes y descuentos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./js/descuentos.js"></script>
 </head>
 <body>
@@ -16,18 +20,22 @@
         </nav>
     </header>
     <main>
-        <section class="producto">
-            <figure>
-                <img src="https://picsum.photos/200" alt="random">
+        <section class="product">
+            <figure class="product__imagen">
+                <img src="https://picsum.photos/200" alt="phone(1)" class="product__imagen-img">
             </figure>
-            <section producto__attributes>
-                <h2 product__name>Nothing phone(1)</h2>
-                <p>Glyph Interface <br>
-                    50 MP dual camera <br>
-                    Nothing OS <br>
-                    120Hz OLED display <br>
-                    Snapdragon™ 778G+</p>
-                <p id="PrecioFinal"></p>
+            <section class="product__attributes">
+                <div class="main__attributes">
+                    <h2 class="product__name">Nothing phone(1)</h2>
+                    <p class="product__price" id="Precio">$00.00</p>
+                    <p class="product__priceDiscount" id="ResultF"></p>
+                </div>
+                <p class="product__description">Glyph Interface,
+                    50 MP dual camera,
+                    Nothing OS,
+                    120Hz OLED display,
+                    Snapdragon™ 778G</p>
+                <p id="ElPrecioFinal"></p>
             </section>
         </section>
         <section class="calc">
@@ -54,8 +62,6 @@
                 <button type="button" onclick="buttonPriceDiscount()" class="form__button">
                     Calcular el precio con descuento
                 </button>
-                <p id="ResultP" class="form__respuesta"></p>
-                <p id="ResultF" class="form__respuesta"></p>
             </form>
         </section>
     </main>
