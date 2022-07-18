@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentajes y descuentos</title>
+    <script src="./js/descuentos.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <h1 class="nav__title">
+                Porcentajes y descuentos
+            </h1>
+        </nav>
+    </header>
+    <main>
+        <section class="producto">
+            <figure>
+                <img src="https://picsum.photos/200" alt="random">
+            </figure>
+            <section producto__attributes>
+                <h2 product__name>Nothing phone(1)</h2>
+                <p>Glyph Interface <br>
+                    50 MP dual camera <br>
+                    Nothing OS <br>
+                    120Hz OLED display <br>
+                    Snapdragon™ 778G+</p>
+                <p id="PrecioFinal"></p>
+            </section>
+        </section>
+        <section class="calc">
+            <span class="calc__icon"></span>
+            <h2 class="calc__title">
+                Calcula el precio a pagar de tus productos con descuento
+            </h2>
+            <form action="" class="form">
+                <label for="InputPrice" class="form__label">
+                    <p class="form__fill">Escribe el precio del producto</p>
+                    <input type="number" id="InputPrice" class="form__input">
+                </label>
+
+                <label for="InputDiscount" class="form__label">
+                    <p class="form__fill">Escribe el descuento del producto</p>
+                    <input type="number" id="InputDiscount" class="form__input">
+                </label>
+
+                <label for="InputCoupon" class="form__label">
+                    <p class="form__fill">Añadir coupon</p>
+                    <input type="text" id="InputCoupon" class="form__input">
+                </label>
+
+                <button type="button" onclick="buttonPriceDiscount()" class="form__button">
+                    Calcular el precio con descuento
+                </button>
+                <p id="ResultP" class="form__respuesta"></p>
+                <p id="ResultF" class="form__respuesta"></p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
