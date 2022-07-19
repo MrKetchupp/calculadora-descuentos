@@ -1,3 +1,14 @@
+// Estilos css para el precio
+const product__price = `
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-align: center;
+    margin-bottom: 5px;
+    text-decoration: line-through;
+    color: var(--secundary);
+`;
+
 //Busqueda de cuponera
 const cuponera = ['nothing20', 'nothing40', 'nothing60'];
 
@@ -28,11 +39,15 @@ function buttonPriceDiscount() {
 
     const precioConDescuento = calcularPrecioOferta(priceValue, discountValue);
 
+    const stylePrecio = document.querySelector('.product__price');
+
+    stylePrecio.style.cssText = product__price;
+
     function precios(cuponDescuento) {
         const precioFinal = calcularPrecioOferta(precioConDescuento, cuponDescuento);
 
         const precio = document.getElementById("Precio");
-        precio.innerText = priceValue;
+        precio.innerText = "$" + priceValue;
         const resultF = document.getElementById("ResultF");
         resultF.innerText = "$" + precioFinal;
     }

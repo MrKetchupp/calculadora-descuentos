@@ -1,5 +1,12 @@
 :root {
     --border: #aaaaf1;
+    --select: #C7ECCF;
+    --primary: #80FD80;
+    --onPrimary: #002204;
+    --secundary: #CCEBC4;
+    --button-on: #006D3F;
+    --background: #FCFDF6;
+    --Tertiary: #9EF0F9;
 }
 
 * {
@@ -11,6 +18,7 @@
 
 html {
     font-size: 62.5%;
+    background-color: var(--background);
 }
 
 /* header */
@@ -43,14 +51,12 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 2px var(--border) dotted;
+    margin-bottom: 10px;
 }
 
 .product__imagen {
-    width: 50%;
-    height: 70%;
-    border: 3px var(--border) dotted;
-    margin-bottom: 10px;
+    width: 35%;
+    height: 75%;
 }
 
 .product__imagen-img {
@@ -78,6 +84,7 @@ main {
     line-height: 1.5rem;
     text-align: center;
     margin-bottom: 5px;
+    color: var(--button-on);
 }
 
 .product__priceDiscount {
@@ -86,6 +93,7 @@ main {
     line-height: 1.5rem;
     text-align: center;
     margin-bottom: 5px;
+    color: var(--button-on);
 }
 
 /* descripcion */
@@ -97,3 +105,100 @@ main {
 }
 
 /* Calculadora */
+.calc {
+    flex-basis: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.calc__icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--select);
+    border-radius: 100%;
+    background-image: url(../icon/discount-2.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.calc__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form__label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.form__fill {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.form__input {
+    width: 80%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px var(--button-on) solid;
+    outline: none;
+    padding-left: 5px;
+}
+
+.form__input:focus {
+    border: 1px var(--onPrimary) solid;
+    box-shadow: inset 0 0 0 1px var(--onPrimary);
+    outline: none;
+}
+
+.form__button {
+    flex-basis: 50%;
+    height: 4rem;
+    padding: 0 20px;
+    border-radius: 7px;
+    border: 2px var(--button-on) solid;
+    background-color: var(--button-on);
+    color: var(--background);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Cuponera */
+.cuponera {
+    flex-basis: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 10px 0;
+    background-color: var(--Tertiary);
+    border-radius: 12px;
+}
+
+.cuponera__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.cuponera__item {
+    list-style: none;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
